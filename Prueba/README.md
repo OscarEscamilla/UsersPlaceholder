@@ -1,7 +1,5 @@
 ## Directorio para la prueba ##
 
-<a  href="https://drive.google.com/drive/folders/1cxEIhdOmvMzdWt9_MkkE84kWtMwA6ZeO?usp=sharing">Descargar Demo</a>
-
 
 ## Arquitectura [mvvm]("https://developer.android.com/jetpack/guide") usada en esta prueba:
 
