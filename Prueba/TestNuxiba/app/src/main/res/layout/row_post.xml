@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp"
+    android:paddingBottom="10dp"
+    android:background="#E1DFDF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:src="@color/colorPrimaryDark"
+            android:layout_width="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="50dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oscar Escamilla"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#F3F3F3"/>
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tv_title_post"
+            android:textStyle=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+            android:textSize="17sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_body_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            android:textSize="15sp">
+
+        </TextView>
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/btn_show_comments"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:text="Comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

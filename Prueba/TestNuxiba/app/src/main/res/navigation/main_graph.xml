@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.oscarescamilla.com.ui.users.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_drinkDetailFragment"
+            app:destination="@id/userDetailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.oscarescamilla.com.ui.users.UserDetailFragment"
+        android:label="User"
+        tools:layout="@layout/fragment_user_detail">
+        <action
+            android:id="@+id/action_mainFragment_to_drinkDetailFragment"
+            app:destination="@id/todosFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_postsFragment"
+            app:destination="@id/postsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/todosFragment"
+        android:name="com.oscarescamilla.com.ui.todos.TodosFragment"
+        android:label="To Do"
+        tools:layout="@layout/fragment_todos">
+
+    </fragment>
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.oscarescamilla.com.ui.posts.PostsFragment"
+        android:label="Posts"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/action_postsFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/commentsFragment"
+        android:name="com.oscarescamilla.com.ui.comments.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" >
+        <action
+            android:id="@+id/action_commentsFragment_to_postsFragment"
+            app:destination="@id/postsFragment" />
+    </dialog>
+
+
+</navigation>
